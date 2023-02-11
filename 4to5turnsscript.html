@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declare prompt variables
+
+let attack;
+let speed;
+let magic;
+
+attack = prompt('Attack');
+speed = prompt('Defense');
+magic = prompt('Magic');
+
+
+// Declare action-turn variables
+
+
+let turn_three_hero_health_points;
+let turn_three_dragon_health_points;
+let turn_four_hero_deals_damage;
+let turn_four_dragon_deals_damage;
+let turn_four_hero_health_points;
+let turn_four_dragon_health_points;
+let turn_five_hero_deals_damage;
+let turn_five_dragon_deals_damage;
+let turn_five_hero_health_points;
+let turn_five_dragon_health_points;
+
+
+// Define Turn-Three Actions
+
+turn_three_hero_health_points = 3
+turn_three_dragon_health_points = -13
+
+
+// Define Turn-Four Actions
+
+if (speed == 3 || speed == 2) {
+    turn_four_hero_deals_damage = 2* (attack + 1);
+} else {
+    turn_four_hero_deals_damage = attack + 1;
+}
+
+turn_four_dragon_deals_damage = 2
+
+turn_four_hero_health_points = turn_three_hero_health_points - turn_four_dragon_deals_damage;
+turn_four_dragon_health_points = turn_three_dragon_health_points - turn_four_hero_deals_damage;
+
+console.log('Hero Health Points after turn four: ' + turn_four_hero_health_points);
+console.log('Dragon Health Points after turn four: ' + turn_four_dragon_health_points);
+
+// Define Turn-Five Actions
+
+if (speed == 3)  {
+    turn_five_hero_deals_damage = 2* (attack + 1);
+} else {
+    turn_five_hero_deals_damage = attack + 1;
+}
+
+turn_five_dragon_deals_damage = 2
+
+turn_five_hero_health_points = turn_four_hero_health_points - turn_five_dragon_deals_damage;
+turn_five_dragon_health_points = turn_four_dragon_health_points - turn_five_hero_deals_damage;
+
+console.log('Hero Health Points after turn five: ' + turn_five_hero_health_points);
+console.log('Dragon Health Points after turn five: ' + turn_five_dragon_health_points);
+    </script>
+</body>
+</html>
