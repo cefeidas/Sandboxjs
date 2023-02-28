@@ -21,15 +21,15 @@ var index = 0;
 
 
 function muteOrUnmute(myArray) {
-    myArray.forEach(element => {
-        if (element.muted == true) {
-            element.muted = false;
+    for (let element = 0; element < myArray.length; element++ ) {
+        if (myArray[element].muted == true) {
+            myArray[element].muted = false;
         } else {
-            element.muted = true;
-        }})};
+            myArray[element].muted = true;
+        }}};
 
 
 let audioFiles = document.querySelectorAll('audio');
-let button = document.getElementById('button');
+let button = document.getElementById("button");
 
-button.addEventListener('click',muteOrUnmute('audioFiles'));
+button.addEventListener("click", () => muteOrUnmute(audioFiles));
