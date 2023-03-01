@@ -1,24 +1,15 @@
 
-
-
-
-
-/*
 addEventListener("load",() => {
-    
+    var index = 0;
+    const slides = document.querySelectorAll(".slides");
+    const classHide = "slides-hidden", count = slides.length;
+    nextSlide();
     function nextSlide() {
         slides[(index ++) % count].classList.add(classHide);
         slides[index % count].classList.remove(classHide);
-        setTimeout(nextSlide, 1000);
-        
+        setTimeout(nextSlide, 700);
     }
 });
-var index = 0;
-    const slides = document.querySelectorAll(".introSlides");
-    const classHide = "introSlidesHidden", count = slides.length;
-    nextSlide();
-    */
-
 
 function muteOrUnmute(myArray) {
     for (let element = 0; element < myArray.length; element++ ) {
@@ -27,9 +18,13 @@ function muteOrUnmute(myArray) {
         } else {
             myArray[element].muted = true;
         }}};
-
-
+   
+    
 let audioFiles = document.querySelectorAll('audio');
 let button = document.getElementById("button");
 
 button.addEventListener("click", () => muteOrUnmute(audioFiles));
+
+window.addEventListener("load", (event) => {
+    alert("For a better experience, please unmute and use a wide screen");
+  });

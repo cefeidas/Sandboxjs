@@ -6,11 +6,10 @@
 body {
     background-color: black;
 }
-.introSlides {
+.slides {
     width: 100%;
-    height: auto;
 }
 
-.introSlidesHidden {
+.slides-hidden {
     display: none;
 }
