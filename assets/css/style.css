@@ -13,3 +13,8 @@ body {
 .slides-hidden {
     display: none;
 }
+
+.conversation {
+    width: 100%;
+    display: none;
+}
