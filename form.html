@@ -10,18 +10,39 @@
     <link rel="stylesheet" href="assets/css/libraries.css">
     <title>Happy Ville</title>    
 </head>
-<body>
+<body class ='form'>
     <audio autoplay loop muted>
         <source src="assets/audio/theme of happy heart.ogg" type= 'audio/ogg'>
     </audio>
     <button type='button' id="button">Click Here to unmute</button>
     <section>
-        <form>
-            
+        <p> Rules of the game blablabla
+        </p>
+        
+        <form id="statsForm" >
+            <div class="damage">
+                <label for="damage">Damage</label>
+                <input name="damage" id="damage" type="number" min="0" max="3" required>
+            </div>
+            <div class="speed">
+                <label for="speed">Speed</label>
+                <input name="speed" id="speed" type="number" min="0" max="3" required>
+            </div>
+            <div class="magic">
+                <label for="magic">Magic</label>
+                <input name="magic" id="magic" type="number" min="0" max="3" required>
+              </div>
+              <div id="errors"></div>
+              <div class="submit">
+                <input type="submit" value="Register">
+            </div>  
+            <div id='battleStats'>
+
+            </div>                    
         </form>
     </section>
 
 
-    <script src="assets/js/script3.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

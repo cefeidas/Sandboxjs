@@ -18,3 +18,14 @@ body {
     width: 100%;
     display: none;
 }
+.battle1 {
+    width: 100%;
+    display: none;
+}
+
+form {
+    background-color: white;
+}
+#battleStats {
+    display: none;
+}
