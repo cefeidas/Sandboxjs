@@ -7,7 +7,7 @@ function showSlidesLoop(myArray) {
         slideIndex = 1;
     }
     myArray[slideIndex-1].style.display = 'block'
-    setTimeout(() => showSlidesLoop(myArray), 1000) 
+    setTimeout(() => showSlidesLoop(myArray), 2000) 
 }
 
 function showSlides(myArray) {
@@ -46,7 +46,7 @@ if (window.location.pathname === "/index.html") {
       } 
 }
 
-function rulesOfTheGame(event) {
+function checkFormInputs(event) {
   event.preventDefault();
   let damage = form.elements['damage'].value;
   let speed = form.elements['speed'].value;
@@ -59,10 +59,69 @@ function rulesOfTheGame(event) {
     let errorDiv = document.getElementById('errors');
     errorDiv.innerHTML = "<p>Please spend all your available points!</p>";
     errorDiv.style.display = 'block';
-  } else {
+  } else if (damage === '3' && speed === '1' && magic === '0'){
     let battleStats = document.getElementById('battleStats');
-    battleStats.innerHTML = "<a href='battle.html'>Let's see how the battle went!</a>";
+    battleStats.innerHTML = "<a href='310.html'>Let's see how the battle went!</a>";
     battleStats.style.display = 'block';
+  } else if (damage === '3' && speed === '1' && magic === '0'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='310.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '3' && speed === '0' && magic === '1'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='301.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '2' && speed === '2' && magic === '0'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='220.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '2' && speed === '1' && magic === '1'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='211.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '2' && speed === '0' && magic === '2'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='202.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '1' && speed === '3' && magic === '0'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='130.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '1' && speed === '2' && magic === '1'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='121.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '1' && speed === '1' && magic === '2'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='112.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '1' && speed === '0' && magic === '3'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='103.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '0' && speed === '3' && magic === '1'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='031.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '0' && speed === '2' && magic === '2'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='022.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+  } else if (damage === '0' && speed === '1' && magic === '3'){
+    let battleStats = document.getElementById('battleStats');
+    battleStats.innerHTML = "<a href='013.html'>Let's see how the battle went!</a>";
+    battleStats.style.display = 'block';
+}
+
+function redirectPage(event) {
+  event.preventDefault();
+  let damage = form.elements['damage'].value;
+  let speed = form.elements['speed'].value;
+  let magic = form.elements['magic'].value;
+  if (damage === '3' && speed === '1' && magic === '0') {
+    window.location.href = '310.html';
+  } else {
+    console.log('chuminada1');
   }
 }
 /*
@@ -225,4 +284,4 @@ window.addEventListener("load", (event) => {
 alert("For a better experience, please unmute and use a wide screen");
 });
 button.addEventListener("click", () => muteOrUnmute(audioFiles));
-form.addEventListener('submit', rulesOfTheGame);
+form.addEventListener('submit', checkFormInputs);
