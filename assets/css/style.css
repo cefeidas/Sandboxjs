@@ -18,14 +18,24 @@ body {
     width: 100%;
     display: none;
 }
+
+.slidesBattle {
+    width: 100%;
+    display: none;
+}
 .battle1 {
     width: 100%;
     display: none;
 }
 
 form {
-    background-color: white;
+    color: green;
 }
+
+p {
+    color: green;
+}
+
 #battleStats {
     display: none;
 }

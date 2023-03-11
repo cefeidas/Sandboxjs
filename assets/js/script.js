@@ -20,7 +20,7 @@ function showSlides(myArray) {
   }
   myArray[slideIndex - 1].style.display = 'block';
   if (slideIndex < myArray.length) {
-      setTimeout(() => showSlides(myArray), 1000);
+      setTimeout(() => showSlides(myArray), 2000);
   }
 }
 
@@ -53,7 +53,7 @@ function checkFormInputs(event) {
   let magic = form.elements['magic'].value;
   if ((parseInt(damage) + parseInt(speed) + parseInt(magic)) > 4) {
     let errorDiv = document.getElementById('errors');
-    errorDiv.innerHTML = "<p>Please ensure all your stats combined are not greater than 4 months!</p>";
+    errorDiv.innerHTML = "<p>Please ensure all your points combined are not greater than 4!</p>";
     errorDiv.style.display = 'block';
   } else if ((parseInt(damage) + parseInt(speed) + parseInt(magic)) < 4) {
     let errorDiv = document.getElementById('errors');
@@ -109,8 +109,9 @@ function checkFormInputs(event) {
     battleStats.style.display = 'block';
   } else if (damage === '0' && speed === '1' && magic === '3'){
     let battleStats = document.getElementById('battleStats');
-    battleStats.innerHTML = "<a href='013.html'>Let's see how the battle went!</a>";
+    battleStats.innerHTML = "<a href='310.html'>Let's see how the battle went!</a>";
     battleStats.style.display = 'block';
+  }
 }
 
 function redirectPage(event) {
@@ -280,8 +281,5 @@ let form = document.getElementById("statsForm");
 
 
 window.addEventListener("load", () => showSlidesLoop(Array.from(slides)));
-window.addEventListener("load", (event) => {
-alert("For a better experience, please unmute and use a wide screen");
-});
 button.addEventListener("click", () => muteOrUnmute(audioFiles));
 form.addEventListener('submit', checkFormInputs);
