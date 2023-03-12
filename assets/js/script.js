@@ -30,22 +30,6 @@ function muteOrUnmute(audioFiles) {
   }
 }
 
-if (window.location.pathname === "/index.html") {
-  window.addEventListener('load', () => showSlidesLoop(Array.from(slides)));
-  window.addEventListener("load", (event) => {
-    alert("For a better experience, please unmute and use a wide screen");
-    });
-} else if (window.location.pathname === "/introVideo.html") {
-  window.addEventListener('load', () => showSlides(Array.from(slidesIntro)));
-  }  else if (window.location.pathname === "/battle.html") {
-      let damage = form.elements['damage'].value;
-      let speed = form.elements['speed'].value;;
-      let magic = form.elements['magic'].value;;
-      if (damage == 0 && speed == 1 && magic == 3) {
-        window.addEventListener('load', () => showSlides(Array.from(battle1)));
-      } 
-}
-
 function checkFormInputs(event) {
   event.preventDefault();
   let damage = form.elements['damage'].value;
@@ -113,7 +97,7 @@ function checkFormInputs(event) {
     battleStats.style.display = 'block';
   }
 }
-
+/*
 function redirectPage(event) {
   event.preventDefault();
   let damage = form.elements['damage'].value;
@@ -125,7 +109,7 @@ function redirectPage(event) {
     console.log('chuminada1');
   }
 }
-/*
+
 function rulesOfTheGame(event) {
   event.preventDefault();
   let damage = form.elements['damage'].value;
@@ -281,5 +265,8 @@ let form = document.getElementById("statsForm");
 
 
 window.addEventListener("load", () => showSlidesLoop(Array.from(slides)));
+if (window.location.pathname === "/introVideo.html") {
+  window.addEventListener('load', () => showSlides(Array.from(slidesIntro)));
+  }
 button.addEventListener("click", () => muteOrUnmute(audioFiles));
 form.addEventListener('submit', checkFormInputs);
